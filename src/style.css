@@ -1,0 +1,59 @@
+*, *::before,*::after{
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: burlywood;
+}
+
+.calculator-grid{
+    justify-content: center;
+    margin: 2rem;
+    display:grid;
+    margin-top:2rem;
+    grid-template-columns:repeat(4,5rem);
+    grid-template-rows:minmax(7rem,auto) repeat(5,6rem);
+}
+
+.span-two{
+    grid-column-end: span 2;
+}
+
+.output{
+    grid-column: 1/-1;
+    background-color:brown;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding:.75rem;
+    word-wrap: break-word;
+    word-break:break-all;
+}
+
+.previous-operand{
+    color: wheat;
+    font-size: 2rem;
+}
+
+.current-operand{
+    color: antiquewhite;
+    font-size: 2rem;
+}
+
+button{
+    cursor: pointer;
+    font-size: 2rem;
+    border:1px solid white;
+    background-color:rgb(255,255,255,0.75);
+    outline: none;
+}
+
+button:hover,:focus{
+    background-color: rgb(255,255,255,1);
+}
+/* output is a main 
+div hence making it sides equal make the whole system at same length*/
+
+/*basically flex is used to adjust text or may be images automatically according to their abundence*/
